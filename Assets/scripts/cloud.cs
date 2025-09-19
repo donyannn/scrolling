@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class cloud : MonoBehaviour
 {
+    public float speed = 0.005f;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +14,7 @@ public class cloud : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(-0.005f, 0f, 0f);
+        transform.Translate(-speed, 0f, 0f);
         if (transform.position.x < -14f)
         {
             Vector3 newPosition = new Vector3(14f, 0f, 0f);
